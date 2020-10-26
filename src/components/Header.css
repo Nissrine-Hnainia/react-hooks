@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-self: space-around;
+    align-items: center; 
+    background-color:  #e6d1aa;
+}
+h1 {
+    margin-left: 540px;
+    font-family: planet kosmos;
+    color: black;
+}
+span {
+    color: darkgoldenrod;
+}
+.filmIcon {
+    margin-left: 100px;
+}
+/*download font planet kosmos*/

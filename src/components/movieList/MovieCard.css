@@ -1,0 +1,52 @@
+.movieBlock {
+    background-color:  #e6d1aa;
+    display:block;
+    width: 300px;
+    height:450px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px rgb(168, 140, 88);
+    position: relative;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+.moviePoster {
+    width: 400px;
+    height: 300px;
+}
+.movieTitle {
+    text-align: center;
+    color:black;
+    margin-top: 70px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+.movieDesc {
+    position: absolute;
+    background-color:#141414;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    height: 230px;
+    transform: translateX(100%);
+}
+h3 {
+    margin-left: 100px;
+    color: darkgoldenrod;
+    font-family: Arial, sans-serif;
+}
+p {
+    color: #e6d1aa;
+    line-height: 22px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    padding-left: 7px;
+    padding-right: 5px;
+}
+.movieBlock:hover .movieDesc {
+    transform: translateX(0%);
+}

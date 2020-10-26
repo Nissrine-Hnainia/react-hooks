@@ -1,0 +1,28 @@
+.addButton {
+    margin-left: 625px;
+    margin-bottom: 50px;
+    height: 60px;
+    background-color: #e6d1aa;
+    border-radius: 5px;
+}
+.title {
+    margin-left: 120px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.rate {
+    margin-left: 120px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.posterUrl {
+    margin-left: 80px;
+    border-radius: 10px;
+}
+.description {
+    margin-left: 70px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 250px;
+}

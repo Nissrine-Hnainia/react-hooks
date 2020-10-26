@@ -1,0 +1,15 @@
+.searchMovie {
+    text-align: center;
+    margin-top: 50px;
+}
+input {
+    border-radius: 20px;
+    height: 30px;
+    padding-left: 20px;
+    font-family: Arial, sans-serif;
+    font-size: small;
+}
+.movieRate {
+    text-align: center;
+    margin-top: 20px;
+}

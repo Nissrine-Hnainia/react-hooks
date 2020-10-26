@@ -1,0 +1,11 @@
+.movie-ctnr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 80px;
+}
+img {
+    width:350px;
+    height: 350px;
+}

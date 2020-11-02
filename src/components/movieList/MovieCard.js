@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import StarRatingComponent from "react-star-rating-component";
 import './MovieCard.css';
+import { Link } from 'react-router-dom';
 
 
 const MovieCard = (props) => {
 
-  const [description, setDescription] = useState("")
+  
   return (
     <div className="movieBlock">
-      <a href="#">
+      <Link to={`/movieInfo/${props.id}`}>
         <div className="moviePoster">
-          <img src={props.posterUrl}/>
+          <img src={props.posterUrl} alt="poster"/>
         </div>
         <div className="movieTitle">
           <h2>{props.title}</h2>
@@ -22,7 +23,7 @@ const MovieCard = (props) => {
           <h3>Description</h3>
           <p>{props.description}</p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

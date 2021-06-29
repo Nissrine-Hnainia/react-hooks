@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import Modal from 'react-modal';
-import './AddMovie.css';
 
 
 const AddMovie = ({addMovie}) => {
@@ -17,37 +16,38 @@ const AddMovie = ({addMovie}) => {
         setNewMovie({ ...newMovie, [e.target.name]: e.target.value });
       };
     return (
-        <div>
+        <div className="addMovie">
             <Button className="addButton" onClick={()=> setModalIsOpen(true)}>Add new movie</Button>
-            <Modal isOpen={modalIsOpen}>
+            <Modal isOpen={modalIsOpen} className="modal">
                 <h2>Add a new movie</h2>
                 <body>
                     <form>
-                        <div>
+                        <div className="entries">
                             <label>Title</label>
-                            <input type="text" className="title" name="title" placeholder="Insert movie title..." onChange={handleMovie}/>
+                            <input type="text" className="input" name="title" placeholder="Insert movie title..." onChange={handleMovie}/>
                         </div>
-                        <div>
+                        <div className="entries">
                             <label>Rate</label>
-                            <input type="text" className="rate" name="rate" placeholder="Insert rate..." onChange={handleMovie}/>
+                            <input type="text" className="input" name="rate" placeholder="Insert rate..." onChange={handleMovie}/>
                         </div>
-                        <div>
+                        <div className="entries">
                             <label>Description</label>
-                            <textarea type="text" className="description" name='description' placeholder="Insert movie description..." onChange={handleMovie}/>
+                            <textarea type="text" className="input" name='description' placeholder="Insert movie description..." onChange={handleMovie}/>
                         </div>
-                        <div>
+                        <div className="entries">
                             <label>Poster Url</label>
-                            <input type="url" className="posterUrl" name="posterUrl" placeholder="Insert poster url..." onChange={handleMovie}/>
+                            <input type="url" className="input" name="posterUrl" placeholder="Insert poster url..." onChange={handleMovie}/>
                         </div>
                     </form>
                 </body>
-                <div>
+                <div className="btns">
                     <Button onClick={()=> {
                         addMovie(newMovie);
                         setNewMovie ({title:"", rate:"", description:"", posterUrl:""})
-                    }}>Submit</Button>
-                </div>
-                <div>
+                    }}> 
+                    Submit
+                    </Button>
+
                     <Button onClick={() => setModalIsOpen(false)}>close</Button>
                 </div>
             </Modal>

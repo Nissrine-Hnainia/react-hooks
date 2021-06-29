@@ -1,3 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display&family=Josefin+Sans:ital,wght@0,100;0,300;1,200&family=Teko:wght@300&display=swap');
 html {
+  background-color: #FAEBD7;
+  margin: 0;
+  padding: 0;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #745226;
+  margin: 0;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.header h1{
+  margin-left: 10px;
+  font-size: 50px;
+  color: #e6d1aa;
+  font-style: italic;
+}
+.sub-header{
+  display: flex;
+  margin-right: 10px;
+  width: 350px;
+  justify-content: space-between;
+  align-items: center;
+}
+.searchMovie input{
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  font-size: larger;
+  border: none;
+  caret-color: transparent;
+}
+.searchMovie input:focus{
+  outline: none;
+}
+.movieList{
+  width: 90%;
+  margin: 150px auto 50px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.moviePoster img{
+  width: 350px;
+}
+.movieRate{
+  width: 100px;
+  font-size: 23px;
+  margin: auto;
+}
+.movieCard {
+  width: 300px;
+  height:450px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  box-shadow: 8px 8px 10px #615e58;
+  position: relative;
+  overflow: hidden;
+}
+a{
+  text-decoration: none;
+}
+.moviePoster {
+  width: 300px;
+  height: 300px;
+}
+.movieTitle {
+  text-align: center;
+  color:#37b869;
+  font-size: larger;
+}
+.movieDesc {
+  position: absolute;
   background-color:#141414;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  height: 300px;
+  transform: translateX(100%);
+}
+.movieDesc h3 {
+  margin-left: 100px;
+  color: darkgoldenrod;
+}
+.movieDesc p {
+  color: #e6d1aa;
+  line-height: 35px;
+  font-size: 22px;
+  padding-left: 7px;
+  padding-right: 5px;
+}
+.movieCard:hover .movieDesc {
+  transform: translateX(0%);
+}
+.addMovie{
+  width: 100%;
+  text-align: center;
+}
+.addMovie:focus{
+  outline: none;
+}
+.addButton{
+  width: 300px;
+  height:450px;
+  margin-bottom: 50px;
+  background-color: #745226;
+  color: #e6d1aa;
+  font-size: 35px;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  border-radius: 5px;
+  box-shadow: 3px 3px 4px rgb(168, 140, 88);
+  cursor: pointer;
+}
+.item-container{
+  width: 80%;
+  height: 80%;
+  background-color: #745226;
+  margin: 100px auto;
+  border-radius: 4px;
+}
+.arrow{
+  color: #e6d1aa ;
+  padding: 20px;
+  font-size: 25px;
+}
+.intro{
+  width: 90%;
+  color: #e6d1aa;
+  margin-left: 100px;
+  line-height: 30px;
+}
+.trailer{
+  width: 100vw;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.trailer iframe{
+  width: 50%;
+  height: 350px;
+  margin-bottom: 30px;
+}
+.trailer button{
+  width: 120px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #e6d1aa;
+}
+.trailer button:hover{
+  background-color: #474444;
+  color: #e6d1aa;
+}
+/* Modal */
+.modal{
+  width: 100vw;
+  height: 90vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.modal h2 {
+  color: #745226;
+  font-size: 40px;
+}
+.entries {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.entries .input{
+  width: 70%;
+  padding: 15px;
+  font-family: 'Big Shoulders Stencil Display', cursive;
+  font-size: 25px;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+  margin: 40px auto;
+}
+.btns Button{
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #745226;
 }

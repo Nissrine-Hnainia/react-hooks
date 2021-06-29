@@ -1,31 +1,33 @@
 import React from "react";
 import StarRatingComponent from "react-star-rating-component";
-import './MovieCard.css';
 import { Link } from 'react-router-dom';
 
 
-const MovieCard = (props) => {
+const MovieCard = ({id, posterUrl, title, rate, description}) => {
 
-  
   return (
-    <div className="movieBlock">
-      <Link to={`/movieInfo/${props.id}`}>
+    <div className="movieCard">
+      <Link to={`/movieInfo/${id}`}>
         <div className="moviePoster">
-          <img src={props.posterUrl} alt="poster"/>
+          <img src={posterUrl || "https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg"} alt="poster"/>
         </div>
         <div className="movieTitle">
-          <h2>{props.title}</h2>
+          <h1>{title}</h1>
         </div>
         <div className="movieRate">
-          <StarRatingComponent value={props.rate} starColor="darkgoldenrod"/>
+          <StarRatingComponent value={rate} starColor="#37b869"/>
         </div>
         <div className="movieDesc">
           <h3>Description</h3>
-          <p>{props.description}</p>
+          <p>{description}</p>
         </div>
       </Link>
     </div>
   );
 };
+
+// MovieCard.defaultProps = {
+//     posterUrl: "https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg"
+//   }
 
 export default MovieCard;

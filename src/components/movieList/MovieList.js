@@ -1,10 +1,9 @@
 import React from "react";
 import MovieCard from "./MovieCard.js";
-import "./MovieList.css";
 
 const MovieList = (props) => {
   return (
-    <div className="movie-ctnr">
+    <div className="movieList">
       {props.movies.map((movie) => (
         <MovieCard
           title={movie.title}

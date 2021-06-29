@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import Header from "./components/Header";
 import Filter from "./components/Filter.js";
 import MovieList from "./components/movieList/MovieList";
 import AddMovie from "./components/AddMovie.js";
@@ -146,7 +145,6 @@ function App() {
             path="/"
             render={() => (
               <div>
-                <Header title="Movie" />
                 <Filter
                   handleRate={(next) => setRate(next)}
                   handleSearch={(e) => setSearching(e.target.value)}

@@ -1,19 +1,20 @@
 import React from 'react'
-import {Navbar, Form, FormControl, Button, Container} from "react-bootstrap"
+import {Navbar, Form, FormControl, Container} from "react-bootstrap"
 
-const Header = () => {
+const Header = ({handleSearch}) => {
     return (
         <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">Movie App</Navbar.Brand>
+    <Navbar.Brand href="#home">Pet Shop</Navbar.Brand>
     <Form className="d-flex">
                 <FormControl
                     type="search"
                     placeholder="Search"
                     className="mr-2"
                     aria-label="Search"
+                    onChange={handleSearch}
                 />
-                <Button variant="outline-success">Search</Button>
+                {/* <Button variant="outline-success">Search</Button> */}
                 </Form>
     </Container>
   </Navbar>

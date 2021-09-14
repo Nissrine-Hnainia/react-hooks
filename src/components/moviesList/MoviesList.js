@@ -1,10 +1,10 @@
 import React from 'react'
 import MovieCard from './MovieCard'
 
-const MoviesList = ({movies}) => {
+const MoviesList = ({movies, nameSearch}) => {
     return (
         <div className="movies">
-            {movies.map((movie, key) => <MovieCard movie={movie} key={movie.id} /> )}
+            {movies.filter(choice => choice.title.toLowerCase().includes(nameSearch.toLowerCase())).map((movie) => <MovieCard movie={movie} key={movie.id} /> )}
         </div>
     )
 }

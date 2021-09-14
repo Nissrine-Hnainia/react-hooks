@@ -1,23 +1,24 @@
 import React from 'react'
-import {Card} from "react-bootstrap"
+import {Card, Button} from "react-bootstrap"
+import { Link } from 'react-router-dom'
 
-const MovieCard = ({movie}) => {
-    // const myStyle ={
-    //     color: "black",
-    //     backgroundColor: "white"
-    // }
+const MovieCard = ({movie:{posterUrl, title, description, rate, id}}) => {
     return (
-        <Card style={{ width: '18rem', marginBottom:"40px" }}> {/* style={myStyle} */}
-            <Card.Img variant="top" src={movie.posterUrl} />
+        <Card style={{ width: '18rem', marginBottom:"40px" }}> 
+            <Card.Img variant="top" src={posterUrl} />
             <Card.Body>
-                <Card.Title> {movie.title} </Card.Title>
+                <Card.Title> {title} </Card.Title>
                 <Card.Text>
-                {movie.description}
+                {description}
                 </Card.Text>
-                <p> {movie.rate} </p>
+                <p> {rate} </p>
             </Card.Body>
+            <Button variant='light'>
+                <Link to={`/movie/${id}`}>Details</Link>
+            </Button>
         </Card>
     )
 }
-//default props for posterUrl 
+
+
 export default MovieCard

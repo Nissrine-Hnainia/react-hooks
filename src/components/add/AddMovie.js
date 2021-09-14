@@ -16,7 +16,7 @@ const AddMovie = ({handleMovie}) => {
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
     const [rate, setRate] = useState("")
-    const [posterUrl, setPosterUrl] = useState("")
+    const [posterUrl, setPosterUrl] = useState("https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555433336/shape/mentalfloss/istock_000038870278_small.jpg")
 
     const handleTitle = (e) => {
         setTitle(e.target.value)  

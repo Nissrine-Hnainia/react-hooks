@@ -1,34 +1,20 @@
 import './App.css';
-import {useState} from "react"
+import { useState } from 'react';
 import { Data } from './components/Data';
-import MoviesList from './components/moviesList/MoviesList';
-import AddMovie from './components/add/AddMovie';
-import Header from './components/header/Header';
-import { Route, Switch } from 'react-router-dom';
-import MovieInfo from './components/moviesList/MovieInfo';
+import TodoList from './components/TodoList';
+import AddTodo from './components/AddTodo';
 
 function App() {
-  const [movies, setMovies] = useState(Data)
-  const [nameSearch, setNameSearch] = useState("")
-  const handleSearch = (e) => {
-    setNameSearch(e.target.value)
-  }
-  const handleMovie = (newMovie) => {
-      setMovies([...movies, newMovie])
+  const [todos, setTodos] = useState(Data)
+
+  const addTodo = (newTodo) => {
+    setTodos([...todos, newTodo])
   }
   return (
     <div className="App">
-      
-      <Switch>
-        <Route exact path="/" render={(props) =>
-        <div>
-          <Header handleSearch={handleSearch} />
-          <MoviesList movies={movies} nameSearch={nameSearch} />
-          <AddMovie handleMovie={handleMovie}/>
-        </div>
-        }/>
-        <Route exact path="/movie/:id" render={(props) => <MovieInfo movies={movies} {...props} />} />
-      </Switch>
+      <h1>My ToDo List</h1>
+      <TodoList todos={todos} />
+      <AddTodo addTodo={addTodo} />
     </div>
   );
 }

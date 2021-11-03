@@ -4,13 +4,3 @@
   margin: 0;
   padding: 0;
 }
-.movies{
-  display: flex;
-  flex-wrap: wrap;
-  width: 80vw;
-  margin: 150px auto;
-  justify-content: space-around;
-}
-.add{
-  margin-bottom: 20px;
-}

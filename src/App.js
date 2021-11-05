@@ -1,20 +1,19 @@
 import './App.css';
 import { useState } from 'react';
-import { Data } from './components/Data';
-import TodoList from './components/TodoList';
-import AddTodo from './components/AddTodo';
+import { Data } from './components/Movies/Data';
+import MoviesList from './components/Movies/MoviesList';
+import AddMovie from './components/Movies/AddMovie';
 
 function App() {
-  const [todos, setTodos] = useState(Data)
+  const [movies, setMovies] = useState(Data)
 
-  const addTodo = (newTodo) => {
-    setTodos([...todos, newTodo])
+  const add = (newMovie) => {
+    setMovies([...movies, newMovie]) 
   }
   return (
     <div className="App">
-      <h1>My ToDo List</h1>
-      <TodoList todos={todos} />
-      <AddTodo addTodo={addTodo} />
+      <MoviesList movies={movies} />
+      <AddMovie add={add} />
     </div>
   );
 }

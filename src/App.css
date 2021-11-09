@@ -8,6 +8,9 @@
   display: flex;
   justify-content: space-around;
   width: 80%;
-  margin: 180px auto;
+  margin: 180px auto 80px auto;
   flex-wrap: wrap;
+}
+.add{
+  margin-bottom: 60px;
 }

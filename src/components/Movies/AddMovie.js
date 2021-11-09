@@ -39,8 +39,8 @@ const AddMovie = ({ add }) => {
         add(newMovie)
     }
     return (
-        <div>
-            <Button variant="primary" onClick={toggle}>
+        <div className="add">
+            <Button variant="primary" style={{padding:"40px"}} onClick={toggle}>
                 Add new movie
             </Button>
 
